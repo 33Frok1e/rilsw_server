@@ -29,8 +29,8 @@ export const masterLogin = async (req: Request, res: Response) => {
 
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
+      secure: true,
+      sameSite: 'none',
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
     return res.json({ success: true, message: 'Master login successful', data: { token } });
@@ -73,8 +73,8 @@ export const login = async (req: Request, res: Response) => {
     const token = jwt.sign({ studentId: student._id }, config.JWT_SECRET as string, { expiresIn: '7d' });
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
+      secure: true,
+      sameSite: 'none',
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
 
@@ -139,8 +139,8 @@ export const createStudent = async (req: Request, res: Response) => {
     const token = jwt.sign({ studentId: student._id }, config.JWT_SECRET as string, { expiresIn: '7d' });
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
+      secure: true,
+      sameSite: 'none',
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
 
