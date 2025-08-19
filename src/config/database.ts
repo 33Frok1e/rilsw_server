@@ -10,7 +10,6 @@ export async function connectDB() {
     console.log('✅ MongoDB connected');
   } catch (err) {
     console.error('❌ MongoDB connection error:', err);
-    // Don't exit process in serverless environment
     throw err;
   }
 } 
