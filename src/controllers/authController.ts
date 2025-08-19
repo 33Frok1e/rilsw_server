@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { Student } from '@/models/Student';
+import { Student } from '../models/Student';
 import jwt from 'jsonwebtoken';
-import { config } from '@/config/config';
-import { ILoginFormData } from '@/types';
-import { generateCertificateNumber } from '@/utils/certificateUtils';
-import { generateToken, verifyToken } from '@/utils/jwtUtils';
+import { config } from '../config/config';
+import { ILoginFormData } from '../types';
+import { generateCertificateNumber } from '../utils/certificateUtils';
+import { generateToken, verifyToken } from '../utils/jwtUtils';
 
 // Hard-coded master credentials
 const MASTER_USERNAME = config.MASTER_USERNAME

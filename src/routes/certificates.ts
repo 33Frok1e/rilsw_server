@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { verifyCertificate } from '@/controllers/certificateController';
+import { verifyCertificate } from '../controllers/certificateController';
 
 const router = Router();
 

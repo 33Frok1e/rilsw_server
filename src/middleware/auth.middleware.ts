@@ -1,4 +1,4 @@
-import { verifyToken } from "@/utils/jwtUtils"
+import { verifyToken } from "../utils/jwtUtils"
 import { NextFunction, Request, Response } from "express"
 
 export const validateLogin = async (req: Request, res: Response, next: NextFunction) => {

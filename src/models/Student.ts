@@ -1,5 +1,5 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import { IStudent } from '@/types';
+import { IStudent } from '../types';
 
 export interface IStudentDocument extends Omit<IStudent, '_id'>, Document {}
 
