@@ -20,3 +20,5 @@ services:
         sync: false
       - key: CLIENT_URL
         sync: false
+      - key: CORS_ORIGIN
+        value: https://www.evxlab.co.in
